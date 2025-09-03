@@ -5,6 +5,7 @@ target_sources(st_mapping_core PRIVATE
   Registration.cpp
   Threshold.cpp
   LocalMap.cpp
+  TrackAccel.cpp
 )
 
 # Link only what these files actually use
