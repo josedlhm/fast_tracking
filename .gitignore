@@ -1,2 +1,8 @@
 cpp/st_mapping/build/
+python/build/
 .DS_Store
+python/st_mapping/.venv/
+python/st_mapping/pybind/__pycache__
+python/st_mapping/core/__pycache__
+
+python/st_mapping/__pycache__
