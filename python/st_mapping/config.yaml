@@ -1,0 +1,47 @@
+# config.yaml (unchanged)
+paths:
+  # input data
+  depth_folder:           "/Users/josedlh/Documents/glomap_recon/depth_small/"
+  images_dir:             "/Users/josedlh/Documents/glomap_recon/images_small/"
+  detections_json:        "/Users/josedlh/Documents/glomap_recon/detections_small.json"
+  poses_file:             "/Users/josedlh/Documents/glomap_recon/poses_kitti"
+  
+
+  # Ceres
+  ceres_solver_bin:       "/Users/josedlh/new_ba/build/bundle_adjustment"
+  refined_poses_file:     "refined_poses.txt"
+
+  # output root and per-step outputs
+  output_dir:             "output"
+  tracks_json:            "tracks.json"            # will live under output_dir
+  cleaned_tracks_json:    "tracks_cleaned.json"    # under output_dir
+  ceres_dir:              "ceres"                  # subfolder under output_dir
+  post_delta_json:        "post_delta.json"        # under output_dir
+  merged_tracks_json:     "merged_tracks.json"     # under output_dir
+
+
+thresholds:
+  iou_thresh:      0.15
+  outlier_delta:   5
+  min_track_len:   4
+  min_consecutive: 4
+
+clustering:
+  voxel_size:     5
+  dbscan_eps:     15
+  dbscan_samples: 10
+  min_cluster_detections: 4 
+
+deduplication:
+  max_centroid_distance_mm: 50.0   
+  min_mask_iou:            0.1    
+
+image:
+  width:  1920                 # IMG_W
+  height: 1200                 # IMG_H
+
+intrinsics:
+  fx: 1272.44
+  fy: 1272.67
+  cx: 920.062
+  cy: 618.949
